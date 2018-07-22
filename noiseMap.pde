@@ -1,19 +1,22 @@
-chatBox c1;
-chatBox c2;
+chatBox[] chatBoxes =new chatBox[10];
+
+float floatingValue =0.0;
+
 void setup() {
 
-  size(200, 200);
+  size(200, 500);
   background(0);
-  c1= new chatBox(20, height, 255,20);
-  c2= new chatBox(60, height, 100,50);
+  for (int i=0; i<chatBoxes.length; i++) {
+    //chatBoxes[0]= new chatBox(random(50,150), height, 255, 50,0.0);
+    chatBoxes[i]= new chatBox(random(50, 150), height, 0, random(20,50), 0.0);
+  }
 }
-
 void draw() {
   background(0); 
-  c2.display();
-  c1.display(); 
-  c1.up();
-  c2.up();
-  c1.floating();
-  c2.floating();
+  for (int i=0; i<chatBoxes.length; i++) {
+    chatBoxes[i].display();    
+    chatBoxes[i].up();
+  }
+  // chatBoxes[0].x=chatBoxes[0].x+random(-0.5,0.5);
+  //chatBoxes[1].x=chatBoxes[1].x+random(-0.5,0.5);
 }
