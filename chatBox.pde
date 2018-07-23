@@ -17,8 +17,9 @@ class chatBox {
   void display() {
     stroke(255);
     noFill();
-    ellipse(x, y, r, r);
-  }
+   //ellipse(x, y, r, r);
+image(bubble,x,y,r,r);  
+}
 
   void up() {
     if (y>=1+r/2) {  
