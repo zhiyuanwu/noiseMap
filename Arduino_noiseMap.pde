@@ -64,7 +64,7 @@ void receiver() {//need to debounce
     if (intval>700&&debouncer==0) {
       cCount=cCount+1;
       debouncer =1;
-    } else if (intval<500) {
+    } else if (intval<200) {
       debouncer =0;
     }
   }
