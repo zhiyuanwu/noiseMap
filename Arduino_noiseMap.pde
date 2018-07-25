@@ -2,7 +2,7 @@ import processing.serial.*;
 
 PImage bubble;
 
-int numberOfBoxes =10;
+int numberOfBoxes =100;
 Serial myPort;  // Create object from Serial class
 String val;     // Data received from the serial port
 float intval;
@@ -31,10 +31,11 @@ void setup() {
   println(portName);
   myPort = new Serial(this, portName, 9600);
   
-  bubble = loadImage("iconmonstr-speech-bubble-10-240.png");
+ // bubble = loadImage("iconmonstr-speech-bubble-10-240.png");
+bubble = loadImage("speechbubble2.png");
 }
 void draw() {
-  background(255); 
+  background(120); 
   for (int i=0; i<cCount; i++) {
     chatBoxes[i].display();    
     chatBoxes[i].up();
